@@ -1,4 +1,4 @@
-import { load, sectionsFor } from './loadout.mjs';
+import { load, sectionsFor, showStats } from './loadout.mjs';
 
 const get = id => document.getElementById(id);
 const dialog = get('inspector');
@@ -135,6 +135,8 @@ function artifactPanel(item) {
   if (item.artifacts?.length) {
     const list = node('ul', 'artifact-list');
     list.setAttribute('role', 'list');
+    list.setAttribute('aria-label', 'Сборка артефактов');
+    list.tabIndex = 0;
     for (const entry of item.artifacts) {
       const li = node('li', 'artifact');
       li.append(picture([entry.image], 'tile'), node('span','',entry.name));
@@ -165,7 +167,11 @@ function inspect(item, button) {
     visual.append(diagram);
     if (item.attachments?.length) visual.append(slotsList(slotRows([], item.attachments), 'slots-extra'));
   }
-  layout.append(visual, statsPanel(item));
+  layout.append(visual);
+  if (showStats(item.kind)) {
+    layout.classList.add('with-stats');
+    layout.append(statsPanel(item));
+  }
   stage.replaceChildren(layout);
   if (item.kind === 'weapon' || item.kind === 'armor' || item.cosmetics?.length) {
     const cosmetic = panel('Оформление', 'lower-panel');

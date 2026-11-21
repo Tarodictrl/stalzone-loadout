@@ -15,12 +15,17 @@ export function sectionsFor(items) {
   return Object.entries(kinds).map(([kind, title]) => ({kind, title, items: items.filter(item => item.kind === kind)})).filter(section => section.items.length);
 }
 
-export async function load(fetcher = fetch) {
-  const response = await fetcher('./loadout.json', {cache:'no-cache'});
-  if (!response.ok) throw new Error('HTTP');
-  const data = await response.json();
+export const showStats = kind => kind === 'weapon';
+
+export function validate(data) {
   const date = data?.updated;
   const validDate = typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0,10) === date;
   if (!validDate || !filled(data.player) || typeof data.demo !== 'boolean' || !Array.isArray(data.items) || !data.items.every(itemValid) || new Set(data.items.map(item => item.id)).size !== data.items.length) throw new Error('Формат');
   return data;
+}
+
+export async function load(fetcher = fetch) {
+  const response = await fetcher('./loadout.json', {cache:'no-cache'});
+  if (!response.ok) throw new Error('HTTP');
+  return validate(await response.json());
 }
