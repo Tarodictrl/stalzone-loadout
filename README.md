@@ -16,3 +16,5 @@
 
 Для локального просмотра запусти из папки сайта `python -m http.server 8000` и открой http://localhost:8000/. При открытии HTML двойным кликом загрузка JSON может быть заблокирована.
 Список артефактов находится в разделе «Сборка артефактов» файла index.html.
+
+Иконки предметов: [EXBO Studio, stalzone-database](https://github.com/EXBO-Studio/stalzone-database), Apache-2.0 (см. `EXBO-LICENSE.txt`).
