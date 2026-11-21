@@ -1,31 +1,27 @@
 {
-  "player": "Странник",
+  "player": "Tarodictrl",
   "updated": "2026-11-21",
-  "demo": true,
+  "demo": false,
   "items": [
     {
-      "slot": "Основное оружие",
-      "name": "Полевой карабин"
+      "slot": "Автоматы · 79,3%",
+      "name": "FAMAS G2 | +15",
+      "image": "./images/famas.webp"
     },
     {
-      "slot": "Дополнительное оружие",
-      "name": "Запасной пистолет"
+      "slot": "Пистолеты · 99,7%",
+      "name": "«Инфразвук» | +15",
+      "image": "./images/pistol.webp"
     },
     {
-      "slot": "Броня",
-      "name": "Костюм разведчика"
+      "slot": "Боевые · 97,9%",
+      "name": "«Citadel» | +15",
+      "image": "./images/citadel.webp"
     },
     {
-      "slot": "Шлем",
-      "name": "Защитный шлем"
-    },
-    {
-      "slot": "Рюкзак",
-      "name": "Походный рюкзак"
-    },
-    {
-      "slot": "Контейнер",
-      "name": "Полевой контейнер"
+      "slot": "Контейнеры",
+      "name": "Контейнер «Бочонок»",
+      "image": "./images/barrel.webp"
     }
   ]
 }
