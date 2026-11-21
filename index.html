@@ -1,1 +1,34 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Публичная витрина снаряжения игрока в Stalzone"><title>Снаряжение · Stalzone</title><link rel="stylesheet" href="./style.css"><script type="module" src="./app.mjs"></script></head><body><div class="frame"><header><strong>STALZONE</strong></header><main><section class="hero" aria-labelledby="title"><h1 id="title">Экипировка</h1><dl id="profile" hidden><div><dt>Обновлено</dt><dd><time id="date"></time></dd></div></dl></section><section class="inventory" aria-labelledby="inventory-title"><div class="heading"><h2 id="inventory-title">Предметы</h2><span id="demo" hidden>Демонабор</span></div><p id="status" role="status">Загружаем снаряжение…</p><noscript><p>Для отображения списка включите JavaScript.</p></noscript><ul id="items" role="list"></ul></section><section class="inventory artifacts" aria-labelledby="build"><h2 id="build">Сборка артефактов</h2><p>Контейнер «Бочонок» · 7/7</p><ul class="artifact-list"><li><img src="./images/smolnik.png" alt="" loading="lazy"><span>Смольник | +15</span></li><li><img src="./images/veiner.png" alt="" loading="lazy"><span>Жильник | +15</span></li><li><img src="./images/mug.png" alt="" loading="lazy"><span>Харя | +15</span></li><li><img src="./images/hedgehog.png" alt="" loading="lazy"><span>Стальной Ёжик | +15</span></li><li><img src="./images/rose.png" alt="" loading="lazy"><span>Проклятая роза | +15</span></li><li><img src="./images/rose.png" alt="" loading="lazy"><span>Проклятая роза | +15</span></li><li><img src="./images/frame.png" alt="" loading="lazy"><span>Остов | +15</span></li></ul></section></main></div></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Экипировка и сборки артефактов в STALZONE">
+  <title>Экипировка · STALZONE</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <div class="frame">
+    <header class="topline">
+      <span class="brand">STALZONE</span>
+      <p class="timestamp" id="timestamp" hidden>Обновлено <time id="date"></time></p>
+    </header>
+    <main>
+      <div class="page-title"><h1>Экипировка</h1><span class="pill" id="demo" hidden>Демонабор</span></div>
+      <p id="status" role="status">Загружаем экипировку…</p>
+      <noscript><style>#status{display:none}</style><p>Для просмотра экипировки включите JavaScript.</p></noscript>
+      <div id="inventory"></div>
+    </main>
+  </div>
+  <dialog id="inspector" aria-labelledby="inspect-title">
+    <div class="inspect-frame">
+      <header class="inspect-header">
+        <button type="button" id="close" autofocus><span aria-hidden="true">←</span> Назад</button>
+        <div><p id="inspect-type" class="kicker"></p><h2 id="inspect-title"></h2></div>
+      </header>
+      <div id="inspect-content"></div>
+    </div>
+  </dialog>
+</body>
+</html>

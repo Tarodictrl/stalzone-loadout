@@ -4,24 +4,130 @@
   "demo": false,
   "items": [
     {
-      "slot": "Автоматы · 79,3%",
-      "name": "FAMAS G2 | +15",
-      "image": "./images/famas.png"
+      "id": "famas-g2",
+      "kind": "weapon",
+      "slot": "Автоматы",
+      "name": "FAMAS G2",
+      "upgrade": 15,
+      "image": "./images/famas.png",
+      "stats": [
+        {
+          "label": "Прочность",
+          "value": "79,3%"
+        },
+        {
+          "label": "Масса",
+          "value": "6,09 кг"
+        },
+        {
+          "label": "Калибр",
+          "value": "5.56"
+        }
+      ]
     },
     {
-      "slot": "Пистолеты · 99,7%",
-      "name": "«Инфразвук» | +15",
-      "image": "./images/pistol.png"
+      "id": "infrasound",
+      "kind": "weapon",
+      "slot": "Пистолеты",
+      "name": "«Инфразвук»",
+      "upgrade": 15,
+      "image": "./images/pistol.png",
+      "cosmetics": [{"slot": "look", "name": "«Инфразвук»", "image": "./images/pistol.png"}],
+      "stats": [
+        {
+          "label": "Прочность",
+          "value": "99,7%"
+        },
+        {
+          "label": "Масса",
+          "value": "2,66 кг"
+        },
+        {
+          "label": "Калибр",
+          "value": "12.7"
+        }
+      ]
     },
     {
-      "slot": "Боевые · 97,9%",
-      "name": "«Citadel» | +15",
-      "image": "./images/citadel.png"
+      "id": "citadel",
+      "kind": "armor",
+      "slot": "Боевые",
+      "name": "«Citadel»",
+      "upgrade": 15,
+      "image": "./images/citadel.png",
+      "cosmetics": [{"slot": "look", "name": "ZIVCAS «Citadel»", "image": "./images/citadel.png"}],
+      "stats": [
+        {
+          "label": "Прочность",
+          "value": "97,9%"
+        },
+        {
+          "label": "Масса",
+          "value": "41,25 кг"
+        }
+      ]
     },
     {
+      "id": "barrel",
+      "kind": "container",
       "slot": "Контейнеры",
       "name": "Контейнер «Бочонок»",
-      "image": "./images/barrel.png"
+      "image": "./images/barrel.png",
+      "stats": [
+        {
+          "label": "Внутренняя защита",
+          "value": "60%"
+        },
+        {
+          "label": "Эффективность",
+          "value": "92,5%"
+        },
+        {
+          "label": "Вместимость",
+          "value": "7/7"
+        },
+        {
+          "label": "Масса",
+          "value": "16 кг"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "Смольник",
+          "upgrade": 15,
+          "image": "./images/smolnik.png"
+        },
+        {
+          "name": "Жильник",
+          "upgrade": 15,
+          "image": "./images/veiner.png"
+        },
+        {
+          "name": "Харя",
+          "upgrade": 15,
+          "image": "./images/mug.png"
+        },
+        {
+          "name": "Стальной Ёжик",
+          "upgrade": 15,
+          "image": "./images/hedgehog.png"
+        },
+        {
+          "name": "Проклятая роза",
+          "upgrade": 15,
+          "image": "./images/rose.png"
+        },
+        {
+          "name": "Проклятая роза",
+          "upgrade": 15,
+          "image": "./images/rose.png"
+        },
+        {
+          "name": "Остов",
+          "upgrade": 15,
+          "image": "./images/frame.png"
+        }
+      ]
     }
   ]
 }
