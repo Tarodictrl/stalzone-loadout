@@ -37,7 +37,6 @@ function card({slot,name,image}, index) {
 }
 try {
   const data = await load();
-  get('player').textContent = data.player;
   get('date').dateTime = data.updated;
   get('date').textContent = new Intl.DateTimeFormat('ru-RU',{dateStyle:'long',timeZone:'UTC'}).format(new Date(data.updated));
   get('profile').hidden = false;
